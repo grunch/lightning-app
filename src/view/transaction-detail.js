@@ -36,6 +36,11 @@ const TransactionDetailView = ({ store, nav }) => (
         <DetailField name="Fee">
           {store.selectedTransaction.feeLabel} {store.unitLabel}
         </DetailField>
+        {store.selectedTransaction.preimage ? (
+          <DetailField name="Proof of payment">
+            {store.selectedTransaction.preimage}
+          </DetailField>
+        ) : null}
         {store.selectedTransaction.confirmationsLabel ? (
           <DetailField name="Confirmations">
             {store.selectedTransaction.confirmationsLabel}

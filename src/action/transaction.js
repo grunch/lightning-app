@@ -112,6 +112,7 @@ class TransactionAction {
         status: 'complete',
         date: parseDate(payment.creation_date),
         hash: payment.payment_hash,
+        preimage: payment.payment_preimage,
       }));
     } catch (err) {
       log.error('Listing payments failed', err);
